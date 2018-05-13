@@ -1,5 +1,9 @@
 # Alerter
 
+![Icon](./app-base/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
+
+[Play Store Demo](https://play.google.com/store/apps/details?id=com.tapadoo.alerter_demo)
+
 ### General
 
 [ ![Download](https://api.bintray.com/packages/tapadoo/maven/alerter/images/download.svg) ](https://bintray.com/tapadoo/maven/alerter/_latestVersion)
@@ -18,7 +22,7 @@ all content.
 
 ```groovy
 dependencies {
-    compile 'com.tapadoo.android:alerter:2.0.0'
+    implementation 'com.tapadoo.android:alerter:2.0.5'
 }
 ```
 
@@ -77,7 +81,8 @@ Alerter.create(this)
 ```java
 Alerter.create(this)
        .setText("Alert text...")
-       .setIcon(R.drawable.alerter_ic_face)
+       .setIcon(R.drawable.alerter_ic_mail_outline)
+       .setIconColorFilter(0) // Optional - Removes white tint
        .show();
 ```
 
@@ -187,6 +192,7 @@ Alerter.create(ExampleActivity.this)
                 .setTitle("Alert Title")
                 .setText("Alert text...")
                 .enableProgress(true)
+                .setProgressColorRes(R.color.colorAccent)
                 .show();
 ```
 
@@ -200,6 +206,6 @@ Clone this repo and check out the `app` module.
 
 See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 
-Copyright 2016 Tapadoo, Dublin.
+Copyright 2017 Tapadoo, Dublin.
 
 ![Alt Text](http://tapadoo.com/wp-content/themes/tapadoo/img/tapadoo-logo@2x.png)
